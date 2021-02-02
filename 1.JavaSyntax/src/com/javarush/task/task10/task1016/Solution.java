@@ -3,6 +3,7 @@ package com.javarush.task.task10.task1016;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,15 +29,13 @@ public class Solution {
 
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
-        String am;
-        for(String i: list){
-            am = list.get(i);
+        int count = 0;
+        for (String a : list) {
+            count = Collections.frequency(list,a);
+                 result.put(a,count);
         }
-            result.put();
-
-
         return result;
     }
-
 }
+
 
