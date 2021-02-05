@@ -22,21 +22,21 @@ public class Solution {
                 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
 
         // Ввод строк
-       ArrayList list = new ArrayList<String>();
+        ArrayList enteredWords = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
             String line = reader.readLine();
-            list.add(line.toLowerCase());
+            enteredWords.add(line.toLowerCase());
         }
 
-     char[] mas =  list.toString().toCharArray();
-        for (char str: alphabet){
+        char[] letters = enteredWords.toString().toCharArray();
+        for (char alphabetLetter : alphabet) {
             int count = 0;
-            for(char str1: mas){
-                if( str==str1){
+            for (char letter : letters) {
+                if (alphabetLetter == letter) {
                     count++;
                 }
             }
-            System.out.println(count+" "+str);
+            System.out.println(count + " " + alphabetLetter);
         }
 
     }
